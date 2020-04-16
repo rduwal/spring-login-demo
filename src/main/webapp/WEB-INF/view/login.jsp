@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html >
 
 <html>
@@ -41,36 +42,28 @@
 			<h3>Subscribe My First Project</h3>
 		</div>
 	</div>
-	
-	
-		
 
-
-		<div class="container text-center">
-
-			<h3>User Login</h3>
-			<hr>
-			<form  method="POST" action="/login-user">
-					
-				<div class="form-group">
-					<label class="control-label col-md-3">Username</label>
-					<div class="col-md-7">
-						<input type="text" class="form-control" name="username"
-							value="${user.username }" />
-					</div>
+	<div class="container text-center">
+		<h3>User Login</h3>
+		<hr>
+		<form  method="POST" action="/login-user">
+			<div class="form-group">
+				<label class="control-label col-md-3">Username</label>
+				<div class="col-md-7">
+					<input type="text" class="form-control" name="username"
+						value="${user.username }" />
 				</div>
-				<div class="form-group">
-					<label class="control-label col-md-3">Password</label>
-					<div class="col-md-7">
-						<input type="password" class="form-control" name="password"
-							value="${user.password }" />
-					</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label col-md-3">Password</label>
+				<div class="col-md-7">
+					<input type="password" class="form-control" name="password"
+						value="${user.password }" />
 				</div>
-				<div class="form-group ">
-					<input type="submit" class="btn btn-primary" value="Login" />
-				</div>
-			</form>
-		</div>
-
-
+			</div>
+			<div class="form-group ">
+				<input type="submit" class="btn btn-primary" value="Login" />
+			</div>
+		</form>
+	</div>
 </body>

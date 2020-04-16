@@ -15,12 +15,11 @@ import com.demo.repo.UserRepository;
 @Service
 @Transactional
 public class UserServices {
-	
-	@Autowired
+
 	private final UserRepository userRepository;
 	
-	public UserServices(UserRepository usreRepository) {
-		this.userRepository=usreRepository;
+	public UserServices(UserRepository userRepository) {
+		this.userRepository=userRepository;
 	}
 
 
@@ -29,7 +28,6 @@ public class UserServices {
 		for(User user : userRepository.findAll()) {
 			users.add(user);
 		}
-		
 		return users;
 	}
 
@@ -38,18 +36,10 @@ public class UserServices {
 		
 	}
 
-
-	public Object findByUsernameAndPassword(String userName, String passWord) {
-		// TODO Auto-generated method stub
-		return null;
+	public User findByUsernameAndPassword(String username, String password) {
+		return userRepository.findByUsernameAndPassword(username, password);
 	}
 
-
-	/*
-	 * public User findByUsernameAndPassword(String userName, String passWord) {
-	 * 
-	 * return userRepository.findByUsernameAndPassword(userName, passWord); }
-	 */
 
 
 	
